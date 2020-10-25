@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
 
@@ -11,7 +6,8 @@ import model.Autentication;
 import model.MainUserCapsule;
 /**
  *
- * @author user
+ * @author https://github.com/Brian-54
+ * @author https://github.com/LuisFlahan4051
  */
 public class LoginForm extends javax.swing.JFrame {
    
@@ -19,6 +15,7 @@ public class LoginForm extends javax.swing.JFrame {
         setTitle("Login");
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     
@@ -28,17 +25,23 @@ public class LoginForm extends javax.swing.JFrame {
     
     
     public void validar(){
-       String name=txtnombre.getText();
-       String password=String.valueOf(txtpass.getPassword());
+       String name = txtnombre.getText();
+       String password = String.valueOf(txtpass.getPassword());
        
        if(!"".equals(name) || !"".equals(password)){
             userCapsule = newAutentication.Autentication(name, password);
+            if (userCapsule == null){
+                JOptionPane.showMessageDialog(null, "No se puede ejecutar la consulta.");
+            }
+            
             if(userCapsule.getEmail_user() != null && userCapsule.getPassword_user() !=null){
                 SistemaForm sistemaForm = new SistemaForm();
                 sistemaForm.setVisible(true);
                 dispose();
             }else{
-                JOptionPane.showMessageDialog(null, "Correo o la contraseña incorrecta");
+                JOptionPane.showMessageDialog(null, "Datos incorrectos!");
+                txtnombre.setText("");
+                txtpass.setText("");
             }
         }else{
             JOptionPane.showMessageDialog(null, "¡No pueden haber datos vacíos!");

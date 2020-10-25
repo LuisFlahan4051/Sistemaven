@@ -15,7 +15,7 @@ public class Autentication {
     
     public MainUserCapsule Autentication(String name,String password){
         MainUserCapsule userCapsule = new MainUserCapsule();
-        String query = "Select * from usuarios WHERE name_user = ? AND password_user = ?";
+        String query = "Select * from users WHERE name_user = ? AND password_user = ?";
         try {
             statement = connection.prepareStatement(query);
             statement.setString(1,name);
@@ -33,7 +33,7 @@ public class Autentication {
             System.out.println(e.toString());
             return null;
         }
-        return null;
+        return userCapsule;
     }
     
 }

@@ -4,59 +4,71 @@
  * and open the template in the editor.
  */
 package vista;
-
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import model.CodigoSQl;
-import model.Connect;
+import model.UserCRUD;
 
 /**
  *
- * @author user
+ * @author https://github.com/Brian-54
+ * @author https://github.com/LuisFlahan4051
  */
+
 public class SistemaForm extends javax.swing.JFrame {
    
-    /**
-     * Creates new form Sistema
-     */
+    
     public SistemaForm() {
         initComponents(); 
         setTitle("Usuarios");
         setLocationRelativeTo(null);
-       
+        setResizable(false);
+        txtId.setVisible(false);
+        jLabel4.setVisible(false);
     }
-    CodigoSQl sql1=new CodigoSQl();
-     
-     
-    //Listamos regustros en la tabla 
-    private void mostrar(){
-        DefaultTableModel modelo=new DefaultTableModel();
-        ResultSet rs=Connect.getTabla("Select * From usuarios");
-        modelo.setColumnIdentifiers(new Object[]{"ID","NOMBRE","CORREO","PASSWORD"});
+    
+    UserCRUD userCRUD = new UserCRUD();
+    
+    
+    
+    
+    
+    
+    
+    
+    public void drawTable(){
+        DefaultTableModel NewModel = new DefaultTableModel();
+        ResultSet resultSet; 
+        
         try {
-            while(rs.next()){
-                modelo.addRow(new Object[]{rs.getInt("id_usuario"),rs.getString("nombre"),rs.getString("Correo"),rs.getString("password")});
+            resultSet = userCRUD.executeSimpleQuery("SELECT * FROM users");
+            if (resultSet == null){
+                JOptionPane.showMessageDialog(null, "No se pudo hacer la consulta!");
             }
-            
-            TablaUsuario.setModel(modelo);
-        } catch (Exception e) {
+            try {
+                NewModel.setColumnIdentifiers(new Object[]{"ID","NOMBRE","CORREO","PASSWORD"});
+                while(resultSet.next()){
+                    NewModel.addRow(new Object[]{
+                        resultSet.getInt("id_user"),
+                        resultSet.getString("name_user"),
+                        resultSet.getString("email_user"),
+                        resultSet.getString("password_user")})
+                    ;
+                }
+                TablaUsuario.setModel(NewModel);
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+            }
+        } catch (SQLException e){
             System.out.println(e.toString());
         }
-    }
-    //Consulta en tabla
-    private void mostrar(int id){
-        DefaultTableModel modelo=new DefaultTableModel();
-            ResultSet rs=Connect.getTabla("Select * From usuarios Where id_usuario="+id);
-            modelo.setColumnIdentifiers(new Object[]{"ID","NOMBRE","CORREO","PASSWORD"});
-        try {
-            while(rs.next()){
-                modelo.addRow(new Object[]{rs.getInt("id_usuario"),rs.getString("nombre"),rs.getString("Correo"),rs.getString("password")});
-            }   
-            TablaUsuario.setModel(modelo);
-        } catch (Exception e) {
-            System.out.println(e.toString());
-        }
+        txtDni.setText("");
+        txtId.setText("");
+        txtNombre.setText("");
+        txtCorreo.setText("");
+        txtPassword.setText("");
     }
     
     @SuppressWarnings("unchecked")
@@ -98,6 +110,11 @@ public class SistemaForm extends javax.swing.JFrame {
                 "ID", "NOMBRE", "CORREO", "PASSWORD"
             }
         ));
+        TablaUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TablaUsuarioMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(TablaUsuario);
         if (TablaUsuario.getColumnModel().getColumnCount() > 0) {
             TablaUsuario.getColumnModel().getColumn(0).setPreferredWidth(20);
@@ -293,7 +310,6 @@ public class SistemaForm extends javax.swing.JFrame {
                         .addGap(1, 1, 1)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -327,6 +343,12 @@ public class SistemaForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
+    
+    
+    
+    
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         System.out.println("Finalizo con exito");
         dispose();
@@ -337,69 +359,123 @@ public class SistemaForm extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        int id_cliente=Integer.parseInt(txtId.getText());
-        String nombre=txtNombre.getText();
-        String correo=txtCorreo.getText();
-        String password=txtPassword.getText();
-        int var=sql1.guardarDatosUsuario(id_cliente, nombre, correo, password);
-        if(var>0){
-            JOptionPane.showMessageDialog(null,"Datos guardados correctamente");
-            txtId.setText("");
-            txtNombre.setText("");
-            txtCorreo.setText("");
-            txtPassword.setText("");
-        }else{
-            JOptionPane.showMessageDialog(null,"Error al guardar");
+        String name = txtNombre.getText();
+        String email = txtCorreo.getText();
+        String password = txtPassword.getText();
+        boolean result;
+        try{
+            result = userCRUD.saveUser(name, password, email);
+            if(!result){
+                JOptionPane.showMessageDialog(null,"Datos guardados correctamente");
+                txtId.setText("");
+                txtNombre.setText("");
+                txtCorreo.setText("");
+                txtPassword.setText("");
+            }else{
+                JOptionPane.showMessageDialog(null,"Error al guardar");
+            }
+        }catch (SQLException e){
+            System.out.println(e.toString());
         }
-        
+        drawTable();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-        mostrar();
-        txtDni.setText("");
+        drawTable();
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        int dni=Integer.parseInt(txtDni.getText());
-        try{
-        int eliminar=sql1.eliminarUsuario(dni);
-            if(eliminar>0){
-                JOptionPane.showMessageDialog(null,"Eliminado correctamente");
-                txtDni.setText("");
-            }else{
-                JOptionPane.showMessageDialog(null,"Error al eliminar");
+        if(txtDni.getText() == ""){
+            JOptionPane.showMessageDialog(null,"Especifique un ID por favor.");
+        }else{
+            int id = Integer.parseInt(txtDni.getText());
+            boolean result;
+            try{
+                result = userCRUD.deleteUserById(id);
+                if(!result){
+                    JOptionPane.showMessageDialog(null,"Datos eliminados correctamente");
+                }else{
+                    JOptionPane.showMessageDialog(null,"Error al eliminar");
+                }
+            }catch (SQLException e){
+                System.out.println(e.toString());
             }
-        }catch(Exception e){
-            System.out.println("error: "+e.toString());
+            drawTable();
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        String nombre=txtNombre.getText();
-        String correo=txtCorreo.getText();
-        String password=txtPassword.getText();
-        int id_cliente=Integer.parseInt(txtId.getText());
-        int var=sql1.modificarUsuario(nombre, correo, password,id_cliente);
-        if(var>0){
-            JOptionPane.showMessageDialog(null,"Datos modificados correctamente");
+        if(txtId.getText() == ""){
+            JOptionPane.showMessageDialog(null,"No podemos actualizar un elemento que no está seleccionado!");
+        }else{
+            String name = txtNombre.getText();
+            String email = txtCorreo.getText();
+            String password = txtPassword.getText();
+            boolean result;
+            try{
+                result = userCRUD.updateUser(name, password, email);
+                if(!result){
+                    JOptionPane.showMessageDialog(null,"Datos actualizados correctamente");
+
+                }else{
+                    JOptionPane.showMessageDialog(null,"Error al actualizar");
+                }
+            }catch (SQLException e){
+                System.out.println(e.toString());
+            }
             txtId.setText("");
             txtNombre.setText("");
             txtCorreo.setText("");
             txtPassword.setText("");
-        }else{
-            JOptionPane.showMessageDialog(null,"Error al Modificar");
         }
+        drawTable();
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        int dni=Integer.parseInt(txtDni.getText());
-        mostrar(dni);
-        txtDni.setText("");
+        if(txtDni.getText() == ""){
+            JOptionPane.showMessageDialog(null,"Especifique un ID por favor.");
+        }else{
+            try{
+                int id = Integer.parseInt(txtDni.getText());
+                DefaultTableModel NewModel = new DefaultTableModel();
+                    ResultSet resultSet = userCRUD.executeSimpleQuery("Select * From users Where id_user = " + id);
+                    NewModel.setColumnIdentifiers(new Object[]{"ID","NOMBRE","CORREO","PASSWORD"});
+                try {
+                    while(resultSet.next()){
+                        NewModel.addRow(new Object[]{
+                            resultSet.getInt("id_user"),
+                            resultSet.getString("name_user"),
+                            resultSet.getString("email_user"),
+                            resultSet.getString("password_user")
+                        });
+                    }   
+                    TablaUsuario.setModel(NewModel);
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+            } catch (SQLException e){
+                System.out.println(e.toString());
+            }
+            txtDni.setText("");
+        }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void TablaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaUsuarioMouseClicked
+        txtDni.setText(TablaUsuario.getValueAt(TablaUsuario.getSelectedRow(), 0).toString());
+        txtId.setText(TablaUsuario.getValueAt(TablaUsuario.getSelectedRow(), 0).toString());
+        txtNombre.setText(TablaUsuario.getValueAt(TablaUsuario.getSelectedRow(), 1).toString());
+        txtCorreo.setText(TablaUsuario.getValueAt(TablaUsuario.getSelectedRow(), 2).toString());
+        txtPassword.setText(TablaUsuario.getValueAt(TablaUsuario.getSelectedRow(), 3).toString());
+    }//GEN-LAST:event_TablaUsuarioMouseClicked
+
+    
+    
+    
+    
+    
+    
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
