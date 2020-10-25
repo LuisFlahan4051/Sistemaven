@@ -2,13 +2,14 @@
 package vista;
 
 
-public class Modelo extends javax.swing.JFrame {
-
+public class Clientes extends javax.swing.JFrame {
     /**
      * Creates new form Clientes
      */
-    public Modelo() {
+    public Clientes() {
         initComponents();
+        setTitle("Clientes");
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -22,17 +23,18 @@ public class Modelo extends javax.swing.JFrame {
 
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        btnMostrarCaptura = new javax.swing.JButton();
+        Tablacliente = new javax.swing.JTable();
+        btnMostrarClientes = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtModelo = new javax.swing.JTextField();
+        txtIdCliente = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtTipoCalzado = new javax.swing.JTextField();
+        txtNombreCliente = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtTalla = new javax.swing.JTextField();
-        btnCapturar = new javax.swing.JButton();
+        txtCorreoCliente = new javax.swing.JTextField();
+        btnCapturarCliente = new javax.swing.JButton();
+        btnEliminarCliente = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -43,73 +45,78 @@ public class Modelo extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        Tablacliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "MODELO", "TIPO", "TALLA"
+                "ID", "NOMBRE", "CORREO"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(50);
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(50);
-            jTable1.getColumnModel().getColumn(2).setPreferredWidth(40);
+        jScrollPane1.setViewportView(Tablacliente);
+        if (Tablacliente.getColumnModel().getColumnCount() > 0) {
+            Tablacliente.getColumnModel().getColumn(0).setPreferredWidth(50);
+            Tablacliente.getColumnModel().getColumn(1).setPreferredWidth(60);
+            Tablacliente.getColumnModel().getColumn(2).setPreferredWidth(70);
         }
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 200));
 
-        btnMostrarCaptura.setBackground(new java.awt.Color(0, 0, 204));
-        btnMostrarCaptura.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnMostrarCaptura.setText("MOSTRAR CAPTURAS");
-        jPanel4.add(btnMostrarCaptura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
+        btnMostrarClientes.setBackground(new java.awt.Color(0, 0, 204));
+        btnMostrarClientes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnMostrarClientes.setText("MOSTRAR CLIENTES");
+        jPanel4.add(btnMostrarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 530, 440));
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("REGISTRO MODELOS");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("REGISTRO CLIENTES");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("MODELO:");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        jLabel6.setText("NOMBRE:");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
 
-        txtModelo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel3.add(txtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 170, 30));
+        txtIdCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPanel3.add(txtIdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 170, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("TIPO DE CALZADO:");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+        jLabel3.setText("CORREO:");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
-        txtTipoCalzado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtTipoCalzado.addActionListener(new java.awt.event.ActionListener() {
+        txtNombreCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNombreCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTipoCalzadoActionPerformed(evt);
+                txtNombreClienteActionPerformed(evt);
             }
         });
-        jPanel3.add(txtTipoCalzado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 170, 30));
+        jPanel3.add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 170, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("TALLA:");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        jLabel4.setText("ID:");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
-        txtTalla.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel3.add(txtTalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 170, 30));
+        txtCorreoCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPanel3.add(txtCorreoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 170, 30));
 
-        btnCapturar.setBackground(new java.awt.Color(51, 255, 51));
-        btnCapturar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnCapturar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/GuardarTodo.png"))); // NOI18N
-        btnCapturar.setText("CAPTURAR");
-        btnCapturar.addActionListener(new java.awt.event.ActionListener() {
+        btnCapturarCliente.setBackground(new java.awt.Color(51, 255, 51));
+        btnCapturarCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnCapturarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/GuardarTodo.png"))); // NOI18N
+        btnCapturarCliente.setText("CAPTURAR");
+        btnCapturarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCapturarActionPerformed(evt);
+                btnCapturarClienteActionPerformed(evt);
             }
         });
-        jPanel3.add(btnCapturar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
+        jPanel3.add(btnCapturarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, 40));
+
+        btnEliminarCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEliminarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        btnEliminarCliente.setText("ELIMINAR");
+        jPanel3.add(btnEliminarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, 40));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 400, 290));
 
@@ -132,13 +139,13 @@ public class Modelo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtTipoCalzadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTipoCalzadoActionPerformed
+    private void txtNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTipoCalzadoActionPerformed
+    }//GEN-LAST:event_txtNombreClienteActionPerformed
 
-    private void btnCapturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapturarActionPerformed
+    private void btnCapturarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapturarClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCapturarActionPerformed
+    }//GEN-LAST:event_btnCapturarClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,8 +183,10 @@ public class Modelo extends javax.swing.JFrame {
         });
     }   
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCapturar;
-    private javax.swing.JButton btnMostrarCaptura;
+    private javax.swing.JTable Tablacliente;
+    private javax.swing.JButton btnCapturarCliente;
+    private javax.swing.JButton btnEliminarCliente;
+    private javax.swing.JButton btnMostrarClientes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -189,9 +198,8 @@ public class Modelo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField txtModelo;
-    private javax.swing.JTextField txtTalla;
-    private javax.swing.JTextField txtTipoCalzado;
+    private javax.swing.JTextField txtCorreoCliente;
+    private javax.swing.JTextField txtIdCliente;
+    private javax.swing.JTextField txtNombreCliente;
     // End of variables declaration//GEN-END:variables
 }
