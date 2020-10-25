@@ -2,13 +2,14 @@
 package vista;
 
 
-public class ClientesForm extends javax.swing.JFrame {
-
+public class Clientes extends javax.swing.JFrame {
     /**
      * Creates new form Clientes
      */
     public ClientesForm() {
         initComponents();
+        setTitle("Clientes");
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -20,26 +21,131 @@ public class ClientesForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tablacliente = new javax.swing.JTable();
+        btnMostrarClientes = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtIdCliente = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtNombreCliente = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtCorreoCliente = new javax.swing.JTextField();
+        btnCapturarCliente = new javax.swing.JButton();
+        btnEliminarCliente = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Tablacliente.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "NOMBRE", "CORREO"
+            }
+        ));
+        jScrollPane1.setViewportView(Tablacliente);
+        if (Tablacliente.getColumnModel().getColumnCount() > 0) {
+            Tablacliente.getColumnModel().getColumn(0).setPreferredWidth(50);
+            Tablacliente.getColumnModel().getColumn(1).setPreferredWidth(60);
+            Tablacliente.getColumnModel().getColumn(2).setPreferredWidth(70);
+        }
+
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, 200));
+
+        btnMostrarClientes.setBackground(new java.awt.Color(0, 0, 204));
+        btnMostrarClientes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnMostrarClientes.setText("MOSTRAR CLIENTES");
+        jPanel4.add(btnMostrarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 530, 440));
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("REGISTRO CLIENTES");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setText("NOMBRE:");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+
+        txtIdCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPanel3.add(txtIdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 170, 30));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setText("CORREO:");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+
+        txtNombreCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNombreCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreClienteActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 170, 30));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("ID:");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
+
+        txtCorreoCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jPanel3.add(txtCorreoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 170, 30));
+
+        btnCapturarCliente.setBackground(new java.awt.Color(51, 255, 51));
+        btnCapturarCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnCapturarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/GuardarTodo.png"))); // NOI18N
+        btnCapturarCliente.setText("CAPTURAR");
+        btnCapturarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCapturarClienteActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnCapturarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, 40));
+
+        btnEliminarCliente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEliminarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        btnEliminarCliente.setText("ELIMINAR");
+        jPanel3.add(btnEliminarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, 40));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 400, 290));
+
+        jPanel2.setBackground(new java.awt.Color(153, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 820, 440));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Marcas.jpg"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 420, 480));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 440));
 
         jPanel1.setBackground(new java.awt.Color(102, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 490));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 490));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreClienteActionPerformed
+
+    private void btnCapturarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapturarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCapturarClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,8 +185,23 @@ public class ClientesForm extends javax.swing.JFrame {
         });
     }   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable Tablacliente;
+    private javax.swing.JButton btnCapturarCliente;
+    private javax.swing.JButton btnEliminarCliente;
+    private javax.swing.JButton btnMostrarClientes;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField txtCorreoCliente;
+    private javax.swing.JTextField txtIdCliente;
+    private javax.swing.JTextField txtNombreCliente;
     // End of variables declaration//GEN-END:variables
 }
