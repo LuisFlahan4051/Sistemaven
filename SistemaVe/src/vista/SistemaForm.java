@@ -20,6 +20,7 @@ import model.UserCRUD;
 public class SistemaForm extends javax.swing.JFrame {
    
     
+    
     public SistemaForm() {
         initComponents(); 
         setTitle("Usuarios");
