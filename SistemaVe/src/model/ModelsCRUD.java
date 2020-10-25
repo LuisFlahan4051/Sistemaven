@@ -39,7 +39,7 @@ public class ModelsCRUD {
         preStatement = connection.prepareStatement("INSERT INTO models(model_model, type_model, talla_model) VALUES (?, ?, ?)");
         preStatement.setString(1, model);
         preStatement.setString(2, type);
-        preStatement.setString(2, talla);
+        preStatement.setString(3, talla);
         result = preStatement.execute();
         preStatement.close();
         

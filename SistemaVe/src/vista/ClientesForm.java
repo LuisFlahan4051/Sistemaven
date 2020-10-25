@@ -1,4 +1,3 @@
-
 package vista;
 
 import java.sql.ResultSet;
@@ -7,11 +6,14 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.ClientsCRUD;
 
+/**
+ *
+ * @author https://github.com/Brian-54
+ * @author https://github.com/LuisFlahan4051
+ */
 
 public class ClientesForm extends javax.swing.JFrame {
-    /**
-     * Creates new form Clientes
-     */
+    
     public ClientesForm() {
         initComponents();
         setTitle("Clientes");
