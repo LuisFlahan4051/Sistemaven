@@ -35,8 +35,8 @@ public class LoginForm extends javax.swing.JFrame {
             }
             
             if(userCapsule.getEmail_user() != null && userCapsule.getPassword_user() !=null){
-                SistemaForm sistemaForm = new SistemaForm();
-                sistemaForm.setVisible(true);
+                MainMenuForm mainMenuForm = new MainMenuForm();
+                mainMenuForm.setVisible(true);
                 dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "Datos incorrectos!");

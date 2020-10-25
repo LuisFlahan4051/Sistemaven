@@ -100,7 +100,7 @@ public class SistemaForm extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TablaUsuario.setModel(new javax.swing.table.DefaultTableModel(
@@ -288,9 +288,7 @@ public class SistemaForm extends javax.swing.JFrame {
                                         .addGap(30, 30, 30)
                                         .addComponent(jLabel3)
                                         .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(34, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -385,7 +383,7 @@ public class SistemaForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        if(txtDni.getText() == ""){
+        if(txtDni.getText() != ""){
             JOptionPane.showMessageDialog(null,"Especifique un ID por favor.");
         }else{
             int id = Integer.parseInt(txtDni.getText());
@@ -405,7 +403,7 @@ public class SistemaForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        if(txtId.getText() == ""){
+        if(txtId.getText() != ""){
             JOptionPane.showMessageDialog(null,"No podemos actualizar un elemento que no está seleccionado!");
         }else{
             String name = txtNombre.getText();
@@ -432,7 +430,7 @@ public class SistemaForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        if(txtDni.getText() == ""){
+        if(txtDni.getText() != ""){
             JOptionPane.showMessageDialog(null,"Especifique un ID por favor.");
         }else{
             try{
