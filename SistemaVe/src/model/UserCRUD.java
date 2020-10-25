@@ -50,7 +50,7 @@ public class UserCRUD {
         return result;
     }
     
-    public boolean updateUser(String name, String password, String email) throws SQLException{
+    public boolean updateUser(int id, String name, String password, String email) throws SQLException{
         PreparedStatement preStatement;
         boolean result = false;
         
@@ -58,12 +58,12 @@ public class UserCRUD {
                 + "name_user = ?, "
                 + "password_user = ?, "
                 + "email_user = ? "
-                + "WHERE name_user = ?"
+                + "WHERE id_user = ?"
         );
         preStatement.setString(1, name);
         preStatement.setString(2, password);
         preStatement.setString(3, email);
-        preStatement.setString(4, name);
+        preStatement.setInt(4, id);
         result = preStatement.execute();
         preStatement.close();
         

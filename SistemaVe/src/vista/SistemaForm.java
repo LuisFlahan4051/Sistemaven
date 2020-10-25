@@ -7,7 +7,6 @@ package vista;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import model.UserCRUD;
 
@@ -39,6 +38,19 @@ public class SistemaForm extends javax.swing.JFrame {
     
     
     
+    
+    public void clearInputs(){
+        txtDni.setText("");
+        txtId.setText("");
+        txtDni.setText("");
+        txtNombre.setText("");
+        txtCorreo.setText("");
+        txtPassword.setText("");
+    }
+    
+    
+    
+    
     public void drawTable(){
         DefaultTableModel NewModel = new DefaultTableModel();
         ResultSet resultSet; 
@@ -65,11 +77,7 @@ public class SistemaForm extends javax.swing.JFrame {
         } catch (SQLException e){
             System.out.println(e.toString());
         }
-        txtDni.setText("");
-        txtId.setText("");
-        txtNombre.setText("");
-        txtCorreo.setText("");
-        txtPassword.setText("");
+        clearInputs();
     }
     
     @SuppressWarnings("unchecked")
@@ -365,10 +373,7 @@ public class SistemaForm extends javax.swing.JFrame {
             result = userCRUD.saveUser(name, password, email);
             if(!result){
                 JOptionPane.showMessageDialog(null,"Datos guardados correctamente");
-                txtId.setText("");
-                txtNombre.setText("");
-                txtCorreo.setText("");
-                txtPassword.setText("");
+                clearInputs();
             }else{
                 JOptionPane.showMessageDialog(null,"Error al guardar");
             }
@@ -383,7 +388,7 @@ public class SistemaForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        if(txtDni.getText() != ""){
+        if("".equals(txtDni.getText())){
             JOptionPane.showMessageDialog(null,"Especifique un ID por favor.");
         }else{
             int id = Integer.parseInt(txtDni.getText());
@@ -403,15 +408,16 @@ public class SistemaForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        if(txtId.getText() != ""){
+        if("".equals(txtDni.getText())){
             JOptionPane.showMessageDialog(null,"No podemos actualizar un elemento que no está seleccionado!");
         }else{
+            int id = Integer.parseInt(txtDni.getText());
             String name = txtNombre.getText();
             String email = txtCorreo.getText();
             String password = txtPassword.getText();
             boolean result;
             try{
-                result = userCRUD.updateUser(name, password, email);
+                result = userCRUD.updateUser(id, name, password, email);
                 if(!result){
                     JOptionPane.showMessageDialog(null,"Datos actualizados correctamente");
 
@@ -421,16 +427,13 @@ public class SistemaForm extends javax.swing.JFrame {
             }catch (SQLException e){
                 System.out.println(e.toString());
             }
-            txtId.setText("");
-            txtNombre.setText("");
-            txtCorreo.setText("");
-            txtPassword.setText("");
+            clearInputs();
         }
         drawTable();
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        if(txtDni.getText() != ""){
+        if("".equals(txtDni.getText())){
             JOptionPane.showMessageDialog(null,"Especifique un ID por favor.");
         }else{
             try{
@@ -448,7 +451,7 @@ public class SistemaForm extends javax.swing.JFrame {
                         });
                     }   
                     TablaUsuario.setModel(NewModel);
-                } catch (Exception e) {
+                } catch (SQLException e) {
                     System.out.println(e.toString());
                 }
             } catch (SQLException e){
