@@ -2,7 +2,7 @@
 package vista;
 
 
-public class Clientes extends javax.swing.JFrame {
+public class ClientesForm extends javax.swing.JFrame {
     /**
      * Creates new form Clientes
      */
