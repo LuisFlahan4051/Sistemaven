@@ -44,6 +44,8 @@ public class Modelos extends javax.swing.JFrame {
         txtTalla = new javax.swing.JTextField();
         btnCapturarModelo = new javax.swing.JButton();
         btnEliminarModelo = new javax.swing.JButton();
+        Id = new javax.swing.JLabel();
+        txtIdModelo = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -59,17 +61,20 @@ public class Modelos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "MODELO", "TIPO", "TALLA"
+                "ID", "MODELO", "TIPO", "TALLA"
             }
         ));
         jScrollPane1.setViewportView(TablaModelo);
+        if (TablaModelo.getColumnModel().getColumnCount() > 0) {
+            TablaModelo.getColumnModel().getColumn(0).setPreferredWidth(30);
+        }
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, 200));
 
         btnMostrarCaptura.setBackground(new java.awt.Color(0, 0, 204));
         btnMostrarCaptura.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnMostrarCaptura.setText("MOSTRAR CAPTURAS");
-        jPanel4.add(btnMostrarCaptura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, -1, -1));
+        jPanel4.add(btnMostrarCaptura, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/zapatillas-de-deporte.png"))); // NOI18N
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 240));
@@ -81,33 +86,33 @@ public class Modelos extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("REGISTRO MODELOS");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("MODELO:");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        txtModelo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel3.add(txtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 170, 30));
+        txtModelo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel3.add(txtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 170, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("TIPO DE CALZADO:");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        txtTipoCalzado.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTipoCalzado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtTipoCalzado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTipoCalzadoActionPerformed(evt);
             }
         });
-        jPanel3.add(txtTipoCalzado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 170, 30));
+        jPanel3.add(txtTipoCalzado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 170, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("TALLA:");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
-        txtTalla.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel3.add(txtTalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 170, 30));
+        txtTalla.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel3.add(txtTalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 170, 30));
 
         btnCapturarModelo.setBackground(new java.awt.Color(255, 0, 51));
         btnCapturarModelo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -125,6 +130,13 @@ public class Modelos extends javax.swing.JFrame {
         btnEliminarModelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
         btnEliminarModelo.setText("ELIMINAR");
         jPanel3.add(btnEliminarModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, 40));
+
+        Id.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Id.setText("Id:");
+        jPanel3.add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+
+        txtIdModelo.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel3.add(txtIdModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 170, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 400, 290));
 
@@ -191,6 +203,7 @@ public class Modelos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Id;
     private javax.swing.JTable TablaModelo;
     private javax.swing.JButton btnCapturarModelo;
     private javax.swing.JButton btnEliminarModelo;
@@ -207,6 +220,7 @@ public class Modelos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField txtIdModelo;
     private javax.swing.JTextField txtModelo;
     private javax.swing.JTextField txtTalla;
     private javax.swing.JTextField txtTipoCalzado;
