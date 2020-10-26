@@ -1,0 +1,206 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Autentication	SistemaVe/src/model/Autentication.java	/^    public MainUserCapsule Autentication(String name,String password){$/;"	m	class:Autentication
+Autentication	SistemaVe/src/model/Autentication.java	/^public class Autentication {$/;"	c
+ClientesForm	SistemaVe/src/vista/ClientesForm.java	/^    public ClientesForm() {$/;"	m	class:ClientesForm
+ClientesForm	SistemaVe/src/vista/ClientesForm.java	/^public class ClientesForm extends javax.swing.JFrame {$/;"	c
+ClientsCRUD	SistemaVe/src/model/ClientsCRUD.java	/^public class ClientsCRUD {$/;"	c
+Connect	SistemaVe/src/model/Connect.java	/^    public void Connect(){$/;"	m	class:Connect
+Connect	SistemaVe/src/model/Connect.java	/^public class Connect {$/;"	c
+Id	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel Id;$/;"	f	class:ModelForm	file:
+LoginForm	SistemaVe/src/vista/LoginForm.java	/^    public LoginForm() {$/;"	m	class:LoginForm
+LoginForm	SistemaVe/src/vista/LoginForm.java	/^public class LoginForm extends javax.swing.JFrame {$/;"	c
+MainMenuForm	SistemaVe/src/vista/MainMenuForm.java	/^    public MainMenuForm() {$/;"	m	class:MainMenuForm
+MainMenuForm	SistemaVe/src/vista/MainMenuForm.java	/^public class MainMenuForm extends javax.swing.JFrame {$/;"	c
+MainUserCapsule	SistemaVe/src/model/MainUserCapsule.java	/^    public MainUserCapsule(){$/;"	m	class:MainUserCapsule
+MainUserCapsule	SistemaVe/src/model/MainUserCapsule.java	/^    public MainUserCapsule(int id, String name, String email, String password) {$/;"	m	class:MainUserCapsule
+MainUserCapsule	SistemaVe/src/model/MainUserCapsule.java	/^public class MainUserCapsule {$/;"	c
+Menu	SistemaVe/src/vista/Menu.java	/^    public Menu() {$/;"	m	class:Menu
+Menu	SistemaVe/src/vista/Menu.java	/^public class Menu extends javax.swing.JFrame {$/;"	c
+ModelForm	SistemaVe/src/vista/ModelForm.java	/^    public ModelForm() {$/;"	m	class:ModelForm
+ModelForm	SistemaVe/src/vista/ModelForm.java	/^public class ModelForm extends javax.swing.JFrame {$/;"	c
+ModelsCRUD	SistemaVe/src/model/ModelsCRUD.java	/^public class ModelsCRUD {$/;"	c
+NewConnection	SistemaVe/src/model/Autentication.java	/^    Connect NewConnection= new Connect();$/;"	f	class:Autentication
+NewConnection	SistemaVe/src/model/ClientsCRUD.java	/^    Connect NewConnection = new Connect();$/;"	f	class:ClientsCRUD
+NewConnection	SistemaVe/src/model/ModelsCRUD.java	/^    Connect NewConnection = new Connect();$/;"	f	class:ModelsCRUD
+NewConnection	SistemaVe/src/model/UserCRUD.java	/^    Connect NewConnection = new Connect();$/;"	f	class:UserCRUD
+SistemaForm	SistemaVe/src/vista/SistemaForm.java	/^    public SistemaForm() {$/;"	m	class:SistemaForm
+SistemaForm	SistemaVe/src/vista/SistemaForm.java	/^public class SistemaForm extends javax.swing.JFrame {$/;"	c
+TablaModelo	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JTable TablaModelo;$/;"	f	class:ModelForm	file:
+TablaModeloMouseClicked	SistemaVe/src/vista/ModelForm.java	/^    private void TablaModeloMouseClicked(java.awt.event.MouseEvent evt) {\/\/GEN-FIRST:event_TablaModeloMouseClicked$/;"	m	class:ModelForm	file:
+TablaUsuario	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JTable TablaUsuario;$/;"	f	class:SistemaForm	file:
+TablaUsuarioMouseClicked	SistemaVe/src/vista/SistemaForm.java	/^    private void TablaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {\/\/GEN-FIRST:event_TablaUsuarioMouseClicked$/;"	m	class:SistemaForm	file:
+Tablacliente	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JTable Tablacliente;$/;"	f	class:ClientesForm	file:
+TablaclienteMouseClicked	SistemaVe/src/vista/ClientesForm.java	/^    private void TablaclienteMouseClicked(java.awt.event.MouseEvent evt) {\/\/GEN-FIRST:event_TablaclienteMouseClicked$/;"	m	class:ClientesForm	file:
+UserCRUD	SistemaVe/src/model/UserCRUD.java	/^public class UserCRUD {$/;"	c
+btnActualizar	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JButton btnActualizar;$/;"	f	class:SistemaForm	file:
+btnActualizarActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnActualizarActionPerformed$/;"	m	class:SistemaForm	file:
+btnBuscar	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JButton btnBuscar;$/;"	f	class:SistemaForm	file:
+btnBuscarActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnBuscarActionPerformed$/;"	m	class:SistemaForm	file:
+btnCapturarCliente	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JButton btnCapturarCliente;$/;"	f	class:ClientesForm	file:
+btnCapturarClienteActionPerformed	SistemaVe/src/vista/ClientesForm.java	/^    private void btnCapturarClienteActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnCapturarClienteActionPerformed$/;"	m	class:ClientesForm	file:
+btnCapturarModelo	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JButton btnCapturarModelo;$/;"	f	class:ModelForm	file:
+btnCapturarModeloActionPerformed	SistemaVe/src/vista/ModelForm.java	/^    private void btnCapturarModeloActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnCapturarModeloActionPerformed$/;"	m	class:ModelForm	file:
+btnClientes	SistemaVe/src/vista/MainMenuForm.java	/^    private javax.swing.JButton btnClientes;$/;"	f	class:MainMenuForm	file:
+btnClientesActionPerformed	SistemaVe/src/vista/MainMenuForm.java	/^    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnClientesActionPerformed$/;"	m	class:MainMenuForm	file:
+btnEliminar	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JButton btnEliminar;$/;"	f	class:SistemaForm	file:
+btnEliminarActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnEliminarActionPerformed$/;"	m	class:SistemaForm	file:
+btnEliminarCliente	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JButton btnEliminarCliente;$/;"	f	class:ClientesForm	file:
+btnEliminarClienteActionPerformed	SistemaVe/src/vista/ClientesForm.java	/^    private void btnEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnEliminarClienteActionPerformed$/;"	m	class:ClientesForm	file:
+btnEliminarModelo	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JButton btnEliminarModelo;$/;"	f	class:ModelForm	file:
+btnEliminarModeloActionPerformed	SistemaVe/src/vista/ModelForm.java	/^    private void btnEliminarModeloActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnEliminarModeloActionPerformed$/;"	m	class:ModelForm	file:
+btnGuardar	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JButton btnGuardar;$/;"	f	class:SistemaForm	file:
+btnGuardarActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnGuardarActionPerformed$/;"	m	class:SistemaForm	file:
+btnIngresar	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JButton btnIngresar;$/;"	f	class:LoginForm	file:
+btnIngresarActionPerformed	SistemaVe/src/vista/LoginForm.java	/^    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnIngresarActionPerformed$/;"	m	class:LoginForm	file:
+btnMenuCliente	SistemaVe/src/vista/Menu.java	/^    private javax.swing.JButton btnMenuCliente;$/;"	f	class:Menu	file:
+btnMenuClienteActionPerformed	SistemaVe/src/vista/Menu.java	/^    private void btnMenuClienteActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnMenuClienteActionPerformed$/;"	m	class:Menu	file:
+btnModeloCliente	SistemaVe/src/vista/Menu.java	/^    private javax.swing.JButton btnModeloCliente;$/;"	f	class:Menu	file:
+btnMostrar	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JButton btnMostrar;$/;"	f	class:SistemaForm	file:
+btnMostrarActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnMostrarActionPerformed$/;"	m	class:SistemaForm	file:
+btnMostrarCaptura	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JButton btnMostrarCaptura;$/;"	f	class:ModelForm	file:
+btnMostrarCapturaActionPerformed	SistemaVe/src/vista/ModelForm.java	/^    private void btnMostrarCapturaActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnMostrarCapturaActionPerformed$/;"	m	class:ModelForm	file:
+btnMostrarClientes	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JButton btnMostrarClientes;$/;"	f	class:ClientesForm	file:
+btnMostrarClientesActionPerformed	SistemaVe/src/vista/ClientesForm.java	/^    private void btnMostrarClientesActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnMostrarClientesActionPerformed$/;"	m	class:ClientesForm	file:
+btnSalir	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JButton btnSalir;$/;"	f	class:SistemaForm	file:
+btnSalirActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnSalirActionPerformed$/;"	m	class:SistemaForm	file:
+btnUsuarios	SistemaVe/src/vista/MainMenuForm.java	/^    private javax.swing.JButton btnUsuarios;$/;"	f	class:MainMenuForm	file:
+btnUsuariosActionPerformed	SistemaVe/src/vista/MainMenuForm.java	/^    private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnUsuariosActionPerformed$/;"	m	class:MainMenuForm	file:
+btnZapatos	SistemaVe/src/vista/MainMenuForm.java	/^    private javax.swing.JButton btnZapatos;$/;"	f	class:MainMenuForm	file:
+btnZapatosActionPerformed	SistemaVe/src/vista/MainMenuForm.java	/^    private void btnZapatosActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_btnZapatosActionPerformed$/;"	m	class:MainMenuForm	file:
+clearInputs	SistemaVe/src/vista/ClientesForm.java	/^    public void clearInputs(){$/;"	m	class:ClientesForm
+clearInputs	SistemaVe/src/vista/ModelForm.java	/^    public void clearInputs(){$/;"	m	class:ModelForm
+clearInputs	SistemaVe/src/vista/SistemaForm.java	/^    public void clearInputs(){$/;"	m	class:SistemaForm
+clientsCRUD	SistemaVe/src/vista/ClientesForm.java	/^    ClientsCRUD clientsCRUD = new ClientsCRUD();$/;"	f	class:ClientesForm
+connection	SistemaVe/src/model/Autentication.java	/^    Connection connection = NewConnection.getConnection();$/;"	f	class:Autentication
+connection	SistemaVe/src/model/ClientsCRUD.java	/^    Connection connection = NewConnection.getConnection();$/;"	f	class:ClientsCRUD
+connection	SistemaVe/src/model/ModelsCRUD.java	/^    Connection connection = NewConnection.getConnection();$/;"	f	class:ModelsCRUD
+connection	SistemaVe/src/model/UserCRUD.java	/^    Connection connection = NewConnection.getConnection();$/;"	f	class:UserCRUD
+deleteClientById	SistemaVe/src/model/ClientsCRUD.java	/^    public boolean deleteClientById(int id) throws SQLException{$/;"	m	class:ClientsCRUD
+deleteModelById	SistemaVe/src/model/ModelsCRUD.java	/^    public boolean deleteModelById(int id) throws SQLException{$/;"	m	class:ModelsCRUD
+deleteUserById	SistemaVe/src/model/UserCRUD.java	/^    public boolean deleteUserById(int id) throws SQLException{$/;"	m	class:UserCRUD
+drawTable	SistemaVe/src/vista/ClientesForm.java	/^    public void drawTable(){$/;"	m	class:ClientesForm
+drawTable	SistemaVe/src/vista/ModelForm.java	/^    public void drawTable(){$/;"	m	class:ModelForm
+drawTable	SistemaVe/src/vista/SistemaForm.java	/^    public void drawTable(){$/;"	m	class:SistemaForm
+emailPriv	SistemaVe/src/model/MainUserCapsule.java	/^    private String emailPriv;$/;"	f	class:MainUserCapsule	file:
+executeSimpleQuery	SistemaVe/src/model/ClientsCRUD.java	/^    public ResultSet executeSimpleQuery(String query) throws SQLException{$/;"	m	class:ClientsCRUD
+executeSimpleQuery	SistemaVe/src/model/ModelsCRUD.java	/^    public ResultSet executeSimpleQuery(String query) throws SQLException{$/;"	m	class:ModelsCRUD
+executeSimpleQuery	SistemaVe/src/model/UserCRUD.java	/^    public ResultSet executeSimpleQuery(String query) throws SQLException{$/;"	m	class:UserCRUD
+getConnection	SistemaVe/src/model/Connect.java	/^    public Connection getConnection(){$/;"	m	class:Connect
+getEmail_user	SistemaVe/src/model/MainUserCapsule.java	/^    public String getEmail_user() {$/;"	m	class:MainUserCapsule
+getId_user	SistemaVe/src/model/MainUserCapsule.java	/^    public int getId_user() {$/;"	m	class:MainUserCapsule
+getName_user	SistemaVe/src/model/MainUserCapsule.java	/^    public String getName_user() {$/;"	m	class:MainUserCapsule
+getPassword_user	SistemaVe/src/model/MainUserCapsule.java	/^    public String getPassword_user() {$/;"	m	class:MainUserCapsule
+idPriv	SistemaVe/src/model/MainUserCapsule.java	/^    private int idPriv;$/;"	f	class:MainUserCapsule	file:
+initComponents	SistemaVe/src/vista/ClientesForm.java	/^    private void initComponents() {$/;"	m	class:ClientesForm	file:
+initComponents	SistemaVe/src/vista/LoginForm.java	/^    private void initComponents() {$/;"	m	class:LoginForm	file:
+initComponents	SistemaVe/src/vista/MainMenuForm.java	/^    private void initComponents() {$/;"	m	class:MainMenuForm	file:
+initComponents	SistemaVe/src/vista/Menu.java	/^    private void initComponents() {$/;"	m	class:Menu	file:
+initComponents	SistemaVe/src/vista/ModelForm.java	/^    private void initComponents() {$/;"	m	class:ModelForm	file:
+initComponents	SistemaVe/src/vista/SistemaForm.java	/^    private void initComponents() {$/;"	m	class:SistemaForm	file:
+jLabel1	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JLabel jLabel1;$/;"	f	class:ClientesForm	file:
+jLabel1	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JLabel jLabel1;$/;"	f	class:LoginForm	file:
+jLabel1	SistemaVe/src/vista/MainMenuForm.java	/^    private javax.swing.JLabel jLabel1;$/;"	f	class:MainMenuForm	file:
+jLabel1	SistemaVe/src/vista/Menu.java	/^    private javax.swing.JLabel jLabel1;$/;"	f	class:Menu	file:
+jLabel1	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel1;$/;"	f	class:ModelForm	file:
+jLabel1	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel1;$/;"	f	class:SistemaForm	file:
+jLabel2	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JLabel jLabel2;$/;"	f	class:ClientesForm	file:
+jLabel2	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JLabel jLabel2;$/;"	f	class:LoginForm	file:
+jLabel2	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel2;$/;"	f	class:ModelForm	file:
+jLabel2	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel2;$/;"	f	class:SistemaForm	file:
+jLabel3	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JLabel jLabel3;$/;"	f	class:ClientesForm	file:
+jLabel3	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JLabel jLabel3;$/;"	f	class:LoginForm	file:
+jLabel3	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel3;$/;"	f	class:ModelForm	file:
+jLabel3	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel3;$/;"	f	class:SistemaForm	file:
+jLabel4	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JLabel jLabel4;$/;"	f	class:ClientesForm	file:
+jLabel4	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JLabel jLabel4;$/;"	f	class:LoginForm	file:
+jLabel4	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel4;$/;"	f	class:ModelForm	file:
+jLabel4	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel4;$/;"	f	class:SistemaForm	file:
+jLabel5	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JLabel jLabel5;$/;"	f	class:ClientesForm	file:
+jLabel5	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JLabel jLabel5;$/;"	f	class:LoginForm	file:
+jLabel5	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel5;$/;"	f	class:ModelForm	file:
+jLabel5	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel5;$/;"	f	class:SistemaForm	file:
+jLabel6	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JLabel jLabel6;$/;"	f	class:ClientesForm	file:
+jLabel6	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel6;$/;"	f	class:ModelForm	file:
+jLabel6	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel6;$/;"	f	class:SistemaForm	file:
+jLabel7	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JLabel jLabel7;$/;"	f	class:LoginForm	file:
+jLabel7	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JLabel jLabel7;$/;"	f	class:SistemaForm	file:
+jLabel8	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JLabel jLabel8;$/;"	f	class:ModelForm	file:
+jPanel1	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JPanel jPanel1;$/;"	f	class:ClientesForm	file:
+jPanel1	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JPanel jPanel1;$/;"	f	class:LoginForm	file:
+jPanel1	SistemaVe/src/vista/Menu.java	/^    private javax.swing.JPanel jPanel1;$/;"	f	class:Menu	file:
+jPanel1	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JPanel jPanel1;$/;"	f	class:ModelForm	file:
+jPanel1	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JPanel jPanel1;$/;"	f	class:SistemaForm	file:
+jPanel2	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JPanel jPanel2;$/;"	f	class:ClientesForm	file:
+jPanel2	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JPanel jPanel2;$/;"	f	class:LoginForm	file:
+jPanel2	SistemaVe/src/vista/Menu.java	/^    private javax.swing.JPanel jPanel2;$/;"	f	class:Menu	file:
+jPanel2	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JPanel jPanel2;$/;"	f	class:ModelForm	file:
+jPanel2	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JPanel jPanel2;$/;"	f	class:SistemaForm	file:
+jPanel3	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JPanel jPanel3;$/;"	f	class:ClientesForm	file:
+jPanel3	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JPanel jPanel3;$/;"	f	class:ModelForm	file:
+jPanel3	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JPanel jPanel3;$/;"	f	class:SistemaForm	file:
+jPanel4	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JPanel jPanel4;$/;"	f	class:ClientesForm	file:
+jPanel4	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JPanel jPanel4;$/;"	f	class:ModelForm	file:
+jScrollPane1	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JScrollPane jScrollPane1;$/;"	f	class:ClientesForm	file:
+jScrollPane1	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JScrollPane jScrollPane1;$/;"	f	class:ModelForm	file:
+jScrollPane1	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JScrollPane jScrollPane1;$/;"	f	class:SistemaForm	file:
+main	SistemaVe/src/vista/ClientesForm.java	/^    public static void main(String args[]) {$/;"	m	class:ClientesForm
+main	SistemaVe/src/vista/LoginForm.java	/^    public static void main(String args[]) {$/;"	m	class:LoginForm
+main	SistemaVe/src/vista/MainMenuForm.java	/^    public static void main(String args[]) {$/;"	m	class:MainMenuForm
+main	SistemaVe/src/vista/Menu.java	/^    public static void main(String args[]) {$/;"	m	class:Menu
+main	SistemaVe/src/vista/ModelForm.java	/^    public static void main(String args[]) {$/;"	m	class:ModelForm
+main	SistemaVe/src/vista/SistemaForm.java	/^    public static void main(String args[]) {$/;"	m	class:SistemaForm
+model	SistemaVe/src/model/Autentication.java	/^package model;$/;"	p
+model	SistemaVe/src/model/ClientsCRUD.java	/^package model;$/;"	p
+model	SistemaVe/src/model/Connect.java	/^package model;$/;"	p
+model	SistemaVe/src/model/MainUserCapsule.java	/^package model;$/;"	p
+model	SistemaVe/src/model/ModelsCRUD.java	/^package model;$/;"	p
+model	SistemaVe/src/model/UserCRUD.java	/^package model;$/;"	p
+modelsCRUD	SistemaVe/src/vista/ModelForm.java	/^    ModelsCRUD modelsCRUD = new ModelsCRUD();$/;"	f	class:ModelForm
+namePriv	SistemaVe/src/model/MainUserCapsule.java	/^    private String namePriv;$/;"	f	class:MainUserCapsule	file:
+newAutentication	SistemaVe/src/vista/LoginForm.java	/^    Autentication newAutentication = new Autentication();$/;"	f	class:LoginForm
+passwordPriv	SistemaVe/src/model/MainUserCapsule.java	/^    private String passwordPriv;$/;"	f	class:MainUserCapsule	file:
+result	SistemaVe/src/model/Autentication.java	/^    ResultSet result;$/;"	f	class:Autentication
+saveClient	SistemaVe/src/model/ClientsCRUD.java	/^    public boolean saveClient(String name, String email) throws SQLException{$/;"	m	class:ClientsCRUD
+saveModel	SistemaVe/src/model/ModelsCRUD.java	/^    public boolean saveModel(String model, String type, String talla) throws SQLException{$/;"	m	class:ModelsCRUD
+saveUser	SistemaVe/src/model/UserCRUD.java	/^    public boolean saveUser(String name, String password, String email) throws SQLException{$/;"	m	class:UserCRUD
+setEmail_user	SistemaVe/src/model/MainUserCapsule.java	/^    public void setEmail_user(String email) {$/;"	m	class:MainUserCapsule
+setId_user	SistemaVe/src/model/MainUserCapsule.java	/^    public void setId_user(int id) {$/;"	m	class:MainUserCapsule
+setName_user	SistemaVe/src/model/MainUserCapsule.java	/^    public void setName_user(String name) {$/;"	m	class:MainUserCapsule
+setPassword_user	SistemaVe/src/model/MainUserCapsule.java	/^    public void setPassword_user(String password) {$/;"	m	class:MainUserCapsule
+statement	SistemaVe/src/model/Autentication.java	/^    PreparedStatement statement;$/;"	f	class:Autentication
+testConnectionQuery	SistemaVe/src/model/Connect.java	/^    public ResultSet testConnectionQuery(String query){$/;"	m	class:Connect
+txtCorreo	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JTextField txtCorreo;$/;"	f	class:SistemaForm	file:
+txtCorreoCliente	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JTextField txtCorreoCliente;$/;"	f	class:ClientesForm	file:
+txtDni	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JTextField txtDni;$/;"	f	class:SistemaForm	file:
+txtId	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JTextField txtId;$/;"	f	class:SistemaForm	file:
+txtIdCliente	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JTextField txtIdCliente;$/;"	f	class:ClientesForm	file:
+txtIdModelo	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JTextField txtIdModelo;$/;"	f	class:ModelForm	file:
+txtModelo	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JTextField txtModelo;$/;"	f	class:ModelForm	file:
+txtNombre	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JTextField txtNombre;$/;"	f	class:SistemaForm	file:
+txtNombreActionPerformed	SistemaVe/src/vista/SistemaForm.java	/^    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_txtNombreActionPerformed$/;"	m	class:SistemaForm	file:
+txtNombreCliente	SistemaVe/src/vista/ClientesForm.java	/^    private javax.swing.JTextField txtNombreCliente;$/;"	f	class:ClientesForm	file:
+txtNombreClienteActionPerformed	SistemaVe/src/vista/ClientesForm.java	/^    private void txtNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_txtNombreClienteActionPerformed$/;"	m	class:ClientesForm	file:
+txtPassword	SistemaVe/src/vista/SistemaForm.java	/^    private javax.swing.JTextField txtPassword;$/;"	f	class:SistemaForm	file:
+txtTalla	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JTextField txtTalla;$/;"	f	class:ModelForm	file:
+txtTipoCalzado	SistemaVe/src/vista/ModelForm.java	/^    private javax.swing.JTextField txtTipoCalzado;$/;"	f	class:ModelForm	file:
+txtTipoCalzadoActionPerformed	SistemaVe/src/vista/ModelForm.java	/^    private void txtTipoCalzadoActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_txtTipoCalzadoActionPerformed$/;"	m	class:ModelForm	file:
+txtnombre	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JTextField txtnombre;$/;"	f	class:LoginForm	file:
+txtnombreActionPerformed	SistemaVe/src/vista/LoginForm.java	/^    private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {\/\/GEN-FIRST:event_txtnombreActionPerformed$/;"	m	class:LoginForm	file:
+txtpass	SistemaVe/src/vista/LoginForm.java	/^    private javax.swing.JPasswordField txtpass;$/;"	f	class:LoginForm	file:
+updateClient	SistemaVe/src/model/ClientsCRUD.java	/^    public boolean updateClient(int id, String name, String email) throws SQLException{$/;"	m	class:ClientsCRUD
+updateModel	SistemaVe/src/model/ModelsCRUD.java	/^    public boolean updateModel(int id, String model, String type, String talla) throws SQLException{$/;"	m	class:ModelsCRUD
+updateUser	SistemaVe/src/model/UserCRUD.java	/^    public boolean updateUser(int id, String name, String password, String email) throws SQLException{$/;"	m	class:UserCRUD
+userCRUD	SistemaVe/src/vista/SistemaForm.java	/^    UserCRUD userCRUD = new UserCRUD();$/;"	f	class:SistemaForm
+userCapsule	SistemaVe/src/vista/LoginForm.java	/^    MainUserCapsule userCapsule= new MainUserCapsule();$/;"	f	class:LoginForm
+validar	SistemaVe/src/vista/LoginForm.java	/^    public void validar(){$/;"	m	class:LoginForm
+vista	SistemaVe/src/vista/ClientesForm.java	/^package vista;$/;"	p
+vista	SistemaVe/src/vista/LoginForm.java	/^package vista;$/;"	p
+vista	SistemaVe/src/vista/MainMenuForm.java	/^package vista;$/;"	p
+vista	SistemaVe/src/vista/Menu.java	/^package vista;$/;"	p
+vista	SistemaVe/src/vista/ModelForm.java	/^package vista;$/;"	p
+vista	SistemaVe/src/vista/SistemaForm.java	/^package vista;$/;"	p
