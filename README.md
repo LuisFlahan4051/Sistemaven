@@ -7,6 +7,13 @@ IPN - UPIICSA
 Profesor: 
 Miranda Chavez Edna Martha.
 
+## Capturas
+![alt text](screenshots/Screenshot1.png)
+![alt text](screenshots/Screenshot2.png)
+![alt text](screenshots/Screenshot3.png)
+![alt text](screenshots/Screenshot4.png)
+![alt text](screenshots/Screenshot5.png)
+
 ## Tecnologías usadas 🛠️
 
 Lenguaje de programación **Java JDK 15**
